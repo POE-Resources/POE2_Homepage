@@ -1,0 +1,1 @@
+export {ICON as CogIcon} from './cog'
