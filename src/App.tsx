@@ -24,6 +24,11 @@ function App() {
       "https://www.redditstatic.com/shreddit/assets/favicon/64x64.png",
       "POE2 Reddit",
     ],
+    [
+      "obsidian://open/?vault=POE2_Notes",
+      "/POE1_Vault_icon.png",
+      "Open POE2 Vault",
+    ],
   ];
 
   return (
