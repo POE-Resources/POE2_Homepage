@@ -5,9 +5,19 @@ import LinkCube from "./Components/linkCube";
 function App() {
   const Links = [
     [
-      "https://maxroll.gg/poe2/resources/acolyte-of-chayula-ascendancy",
-      "https://maxroll.gg/favicon.ico",
-      "Maxroll Monk Acendency",
+      "https://poe2db.tw/us/",
+      "https://web.poecdn.com/protected/image/favicon/poe2/favicon.ico?key=z1ntMm_mlpgr2cNrStO09g",
+      "POE2 DB",
+    ],
+    [
+      "https://marcoaaguiar.github.io/poe2-tree/",
+      "https://marcoaaguiar.github.io/poe2-tree/skill-tree.png",
+      "POE2 Interactive Skilltree",
+    ],
+    [
+      "https://poe2skills.com/",
+      "https://poe2skills.com/images/favicon.ico",
+      "POE2 Interactive Skill Builder",
     ],
   ];
 
@@ -38,12 +48,17 @@ const LinkContainer = (props: { Links: string[][] }) => {
   const { Links } = props;
   return (
     <>
-      <div className="w-full h-full bg-slate-600 rounded-xl p-5">
-        <div className="">
-          {Links.map((el) => {
-            return <LinkCube icon={el[1]} link={el[0]} />;
-          })}
-        </div>
+      <div className="w-full h-full bg-slate-600 rounded-xl p-5 grid grid-cols-7 place-items-center">
+        {Links.map((el) => {
+          return (
+            <LinkCube
+              icon={el[1]}
+              link={el[0]}
+              text={el[2]}
+              className="self-start"
+            />
+          );
+        })}
       </div>
     </>
   );
