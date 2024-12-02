@@ -19,6 +19,11 @@ function App() {
       "https://poe2skills.com/images/favicon.ico",
       "POE2 Interactive Skill Builder",
     ],
+    [
+      "https://www.reddit.com/r/PathOfExile2/",
+      "https://www.redditstatic.com/shreddit/assets/favicon/64x64.png",
+      "POE2 Reddit",
+    ],
   ];
 
   return (
