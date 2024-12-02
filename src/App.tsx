@@ -38,7 +38,7 @@ const LinkContainer = (props: { Links: string[][] }) => {
   const { Links } = props;
   return (
     <>
-      <div className="w-full h-full bg-green-400 rounded-xl p-5">
+      <div className="w-full h-full bg-slate-600 rounded-xl p-5">
         <div className="">
           {Links.map((el) => {
             return <LinkCube icon={el[1]} link={el[0]} />;
