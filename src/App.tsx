@@ -43,8 +43,8 @@ function App() {
 
   //causes infinite re-renders ortherwise and im to lazy to do it properly
   setTimeout(dateCompare, 1);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const dateCompareInterval = setInterval(dateCompare, 60000);
+
+  setInterval(dateCompare, 60000);
 
   return (
     <>
