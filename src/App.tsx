@@ -1,6 +1,8 @@
 import "./App.css";
 import "./Components/settingsToggle";
 import LinkCube from "./Components/linkCube";
+import { useState } from "react";
+import ReactConfetti from "react-confetti";
 
 function App() {
   const Links = [
@@ -31,8 +33,22 @@ function App() {
     ],
   ];
 
+  const [showConfetti, setShowConfetti] = useState(false);
+
+  const dateCompare = () => {
+    const TargetDate = new Date(1733511600000);
+    const CurrentDate = new Date(Date.now());
+    setShowConfetti(CurrentDate >= TargetDate);
+  };
+
+  //causes infinite re-renders ortherwise and im to lazy to do it properly
+  setTimeout(dateCompare, 1);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const dateCompareInterval = setInterval(dateCompare, 60000);
+
   return (
     <>
+      {showConfetti ? <ReactConfetti /> : ""}
       <div className="bg-slate-500 w-screen h-screen flex flex-col">
         <div className="w-full flex justify-center items-center flex-shrink">
           <iframe
