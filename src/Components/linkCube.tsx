@@ -8,7 +8,7 @@ function LinkCube(props: {
     <div
       className={`flex flex-col justify-center items-center w-fit ${props.className}`}
     >
-      <a href={props.link}>
+      <a href={props.link} target="_blank">
         <img src={props.icon} className="bg-slate-700  w-24 h-24 rounded-xl" />
       </a>
       <p className="text-white text-center">{props.text}</p>
